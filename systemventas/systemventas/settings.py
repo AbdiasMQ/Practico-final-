@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,14 +36,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'productos',
     'crispy_forms',
     'crispy_bootstrap4',
-    'allauth',
-    'allauth.account',
-
-
+    'django.contrib.sites', # necesario para django allauth
+    'allauth', 
+    'allauth.account',#sirve para el manejo de cuentas de usuario
+    'allauth.socialaccount', #sirve para el manejo de cuentas sociales
+    'clientes',
+    'ventas',
 ]
+SITE_ID = 1 #sirve para que las demas app sepan que dominio usar
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'systemventas.urls'
@@ -120,7 +124,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
+import os # # obligatorio para usar os.path.join, os.path.basename, etc.
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 MEDIA_URL = '/media/'
@@ -140,3 +144,18 @@ BOOSTSTRAP4 = {
     'error_css_class': 'is-invalid', #clase de bootstrap para campos invalidos
     'success_css_class': 'is-valid', #clase de bootstrap para campos validos
 }
+
+
+# Permite la autenticación clásica de Django (usuario y contraseña)
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+# A dónde redirige después de iniciar sesión
+LOGIN_REDIRECT_URL = '/'
+# A dónde redirige después de cerrar sesión
+LOGOUT_REDIRECT_URL = '/accounts/login/'
+# Métodos permitidos para iniciar sesión (solo username)
+ACCOUNT_LOGIN_METHODS = {"username"}
+# Campos necesarios para el registro de cuenta en allauth
+ACCOUNT_SIGNUP_FIELDS = ["email", "username*", "password1*"]
