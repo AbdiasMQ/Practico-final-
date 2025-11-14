@@ -23,6 +23,9 @@ from django.conf.urls.static import static #sirve para cargar las imagenes
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('productos.urls')),
+    path('clientes/', include('clientes.urls')),
+    path('ventas/', include('ventas.urls')),
+    path('accounts/', include('allauth.urls')), #urls de django allauth
 ]
 
 if settings.DEBUG: # sirve para que no muestre error al cargar las imagenes
