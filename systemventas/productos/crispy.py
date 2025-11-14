@@ -9,4 +9,3 @@ class BaseFormHelper(FormHelper):
         self.label_class = 'col-md col-form-label' #clase de bootstrap para etiquetas
         self.field_class = 'col-md-9' #clase de bootstrap para campos
         self.render_required_fields = "True"
-        

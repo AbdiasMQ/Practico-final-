@@ -18,7 +18,7 @@ def get_image_path(instance, filename):#funcion para generar una ruta unica para
     return os.path.join('productos/', filename)      
 
 class Producto(models.Model):
-    sku = models.CharField("SKU", max_length=20, unique=True)
+    sku = models.CharField("SKU", max_length=20, unique=True ,blank = True)
     nombre = models.CharField("Nombre", max_length=50)
     descripcion = models.CharField("Descripción", max_length=255)
     precio = models.DecimalField("Precio", max_digits=10, decimal_places=2)
@@ -42,16 +42,21 @@ class Producto(models.Model):
         return f"{self.nombre} (SKU: {self.sku})"
 
     def save(self, *args, **kwargs):
+        if not self.sku:
+        # Genera un SKU único de 8 caracteres
+            self.sku = str(uuid.uuid4())[:8].upper()
         super().save(*args, **kwargs)
-        try:
-            img = Image.open(self.imagen.path)
-            if img.height > 300 or img.width > 300:
-                output_size = (300, 300)
-                img.thumbnail(output_size)
-                img.save(self.imagen.path)
 
+    # Redimensionar imagen si es muy grande
+        try:
+            if self.imagen:
+                img = Image.open(self.imagen.path)
+                if img.height > 300 or img.width > 300:
+                    output_size = (300, 300)
+                    img.thumbnail(output_size)
+                    img.save(self.imagen.path)
         except Exception as e:
-            print(f'No se pudo procesar la imagen del producto {self.nombre}: {e}')
+             print(f'No se pudo procesar la imagen del producto {self.nombre}: {e}')
     
     @property
     def necesita_reposicion(self):
