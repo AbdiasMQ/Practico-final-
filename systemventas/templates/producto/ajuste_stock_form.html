@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Ajuste de Stock{% endblock %}
+{% block content %}
+<h2>Ajustar Stock para {{ producto.nombre }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-warning">Aplicar Ajuste</button>
+    <a href="{% url 'producto:producto_detail' producto.pk %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

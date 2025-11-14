@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Detalle Producto{% endblock %}
+{% block content %}
+<h2>{{ producto.nombre }}</h2>
+
+<ul class="list-group mb-3">
+    <li class="list-group-item"><strong>SKU:</strong> {{ producto.sku }}</li>
+    <li class="list-group-item"><strong>Precio:</strong> ${{ producto.precio }}</li>
+    <li class="list-group-item"><strong>Stock:</strong> {{ producto.stock }}</li>
+    <li class="list-group-item"><strong>Stock Mínimo:</strong> {{ producto.stock_minimo }}</li>
+</ul>
+
+<a href="{% url 'producto:movimiento_create' producto.pk %}" class="btn btn-outline-success">Registrar Movimiento</a>
+<a href="{% url 'producto:ajuste_stock' producto.pk %}" class="btn btn-outline-warning">Ajuste Manual</a>
+<a href="{% url 'producto:producto_list' %}" class="btn btn-secondary">Volver</a>
+{% endblock %}
