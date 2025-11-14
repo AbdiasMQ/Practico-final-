@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Formulario Cliente{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h2>{{ view.object|default:'Nuevo Cliente' }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="{% url 'clientes:cliente_list' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
