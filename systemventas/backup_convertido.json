@@ -1,0 +1,1752 @@
+[
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Producto",
+    "content_type": [
+      "productos",
+      "producto"
+    ],
+    "codename": "add_producto"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Producto",
+    "content_type": [
+      "productos",
+      "producto"
+    ],
+    "codename": "change_producto"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Producto",
+    "content_type": [
+      "productos",
+      "producto"
+    ],
+    "codename": "delete_producto"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Producto",
+    "content_type": [
+      "productos",
+      "producto"
+    ],
+    "codename": "view_producto"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Movimiento de Stock",
+    "content_type": [
+      "productos",
+      "movimientostock"
+    ],
+    "codename": "add_movimientostock"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Movimiento de Stock",
+    "content_type": [
+      "productos",
+      "movimientostock"
+    ],
+    "codename": "change_movimientostock"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Movimiento de Stock",
+    "content_type": [
+      "productos",
+      "movimientostock"
+    ],
+    "codename": "delete_movimientostock"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Movimiento de Stock",
+    "content_type": [
+      "productos",
+      "movimientostock"
+    ],
+    "codename": "view_movimientostock"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add email address",
+    "content_type": [
+      "account",
+      "emailaddress"
+    ],
+    "codename": "add_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change email address",
+    "content_type": [
+      "account",
+      "emailaddress"
+    ],
+    "codename": "change_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete email address",
+    "content_type": [
+      "account",
+      "emailaddress"
+    ],
+    "codename": "delete_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view email address",
+    "content_type": [
+      "account",
+      "emailaddress"
+    ],
+    "codename": "view_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add email confirmation",
+    "content_type": [
+      "account",
+      "emailconfirmation"
+    ],
+    "codename": "add_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change email confirmation",
+    "content_type": [
+      "account",
+      "emailconfirmation"
+    ],
+    "codename": "change_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete email confirmation",
+    "content_type": [
+      "account",
+      "emailconfirmation"
+    ],
+    "codename": "delete_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view email confirmation",
+    "content_type": [
+      "account",
+      "emailconfirmation"
+    ],
+    "codename": "view_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Cliente",
+    "content_type": [
+      "clientes",
+      "cliente"
+    ],
+    "codename": "add_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Cliente",
+    "content_type": [
+      "clientes",
+      "cliente"
+    ],
+    "codename": "change_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Cliente",
+    "content_type": [
+      "clientes",
+      "cliente"
+    ],
+    "codename": "delete_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Cliente",
+    "content_type": [
+      "clientes",
+      "cliente"
+    ],
+    "codename": "view_cliente"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add venta",
+    "content_type": [
+      "ventas",
+      "venta"
+    ],
+    "codename": "add_venta"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change venta",
+    "content_type": [
+      "ventas",
+      "venta"
+    ],
+    "codename": "change_venta"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete venta",
+    "content_type": [
+      "ventas",
+      "venta"
+    ],
+    "codename": "delete_venta"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view venta",
+    "content_type": [
+      "ventas",
+      "venta"
+    ],
+    "codename": "view_venta"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add item venta",
+    "content_type": [
+      "ventas",
+      "itemventa"
+    ],
+    "codename": "add_itemventa"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change item venta",
+    "content_type": [
+      "ventas",
+      "itemventa"
+    ],
+    "codename": "change_itemventa"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete item venta",
+    "content_type": [
+      "ventas",
+      "itemventa"
+    ],
+    "codename": "delete_itemventa"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view item venta",
+    "content_type": [
+      "ventas",
+      "itemventa"
+    ],
+    "codename": "view_itemventa"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add site",
+    "content_type": [
+      "sites",
+      "site"
+    ],
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change site",
+    "content_type": [
+      "sites",
+      "site"
+    ],
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete site",
+    "content_type": [
+      "sites",
+      "site"
+    ],
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view site",
+    "content_type": [
+      "sites",
+      "site"
+    ],
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add social account",
+    "content_type": [
+      "socialaccount",
+      "socialaccount"
+    ],
+    "codename": "add_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change social account",
+    "content_type": [
+      "socialaccount",
+      "socialaccount"
+    ],
+    "codename": "change_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete social account",
+    "content_type": [
+      "socialaccount",
+      "socialaccount"
+    ],
+    "codename": "delete_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view social account",
+    "content_type": [
+      "socialaccount",
+      "socialaccount"
+    ],
+    "codename": "view_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add social application",
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ],
+    "codename": "add_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change social application",
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ],
+    "codename": "change_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete social application",
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ],
+    "codename": "delete_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view social application",
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ],
+    "codename": "view_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add social application token",
+    "content_type": [
+      "socialaccount",
+      "socialtoken"
+    ],
+    "codename": "add_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change social application token",
+    "content_type": [
+      "socialaccount",
+      "socialtoken"
+    ],
+    "codename": "change_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete social application token",
+    "content_type": [
+      "socialaccount",
+      "socialtoken"
+    ],
+    "codename": "delete_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view social application token",
+    "content_type": [
+      "socialaccount",
+      "socialtoken"
+    ],
+    "codename": "view_socialtoken"
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "administrador",
+    "permissions": [
+      [
+        "add_emailaddress",
+        "account",
+        "emailaddress"
+      ],
+      [
+        "change_emailaddress",
+        "account",
+        "emailaddress"
+      ],
+      [
+        "delete_emailaddress",
+        "account",
+        "emailaddress"
+      ],
+      [
+        "view_emailaddress",
+        "account",
+        "emailaddress"
+      ],
+      [
+        "add_emailconfirmation",
+        "account",
+        "emailconfirmation"
+      ],
+      [
+        "change_emailconfirmation",
+        "account",
+        "emailconfirmation"
+      ],
+      [
+        "delete_emailconfirmation",
+        "account",
+        "emailconfirmation"
+      ],
+      [
+        "view_emailconfirmation",
+        "account",
+        "emailconfirmation"
+      ],
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_cliente",
+        "clientes",
+        "cliente"
+      ],
+      [
+        "change_cliente",
+        "clientes",
+        "cliente"
+      ],
+      [
+        "delete_cliente",
+        "clientes",
+        "cliente"
+      ],
+      [
+        "view_cliente",
+        "clientes",
+        "cliente"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_movimientostock",
+        "productos",
+        "movimientostock"
+      ],
+      [
+        "change_movimientostock",
+        "productos",
+        "movimientostock"
+      ],
+      [
+        "delete_movimientostock",
+        "productos",
+        "movimientostock"
+      ],
+      [
+        "view_movimientostock",
+        "productos",
+        "movimientostock"
+      ],
+      [
+        "add_producto",
+        "productos",
+        "producto"
+      ],
+      [
+        "change_producto",
+        "productos",
+        "producto"
+      ],
+      [
+        "delete_producto",
+        "productos",
+        "producto"
+      ],
+      [
+        "view_producto",
+        "productos",
+        "producto"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "add_site",
+        "sites",
+        "site"
+      ],
+      [
+        "change_site",
+        "sites",
+        "site"
+      ],
+      [
+        "delete_site",
+        "sites",
+        "site"
+      ],
+      [
+        "view_site",
+        "sites",
+        "site"
+      ],
+      [
+        "add_socialaccount",
+        "socialaccount",
+        "socialaccount"
+      ],
+      [
+        "change_socialaccount",
+        "socialaccount",
+        "socialaccount"
+      ],
+      [
+        "delete_socialaccount",
+        "socialaccount",
+        "socialaccount"
+      ],
+      [
+        "view_socialaccount",
+        "socialaccount",
+        "socialaccount"
+      ],
+      [
+        "add_socialapp",
+        "socialaccount",
+        "socialapp"
+      ],
+      [
+        "change_socialapp",
+        "socialaccount",
+        "socialapp"
+      ],
+      [
+        "delete_socialapp",
+        "socialaccount",
+        "socialapp"
+      ],
+      [
+        "view_socialapp",
+        "socialaccount",
+        "socialapp"
+      ],
+      [
+        "add_socialtoken",
+        "socialaccount",
+        "socialtoken"
+      ],
+      [
+        "change_socialtoken",
+        "socialaccount",
+        "socialtoken"
+      ],
+      [
+        "delete_socialtoken",
+        "socialaccount",
+        "socialtoken"
+      ],
+      [
+        "view_socialtoken",
+        "socialaccount",
+        "socialtoken"
+      ],
+      [
+        "add_itemventa",
+        "ventas",
+        "itemventa"
+      ],
+      [
+        "change_itemventa",
+        "ventas",
+        "itemventa"
+      ],
+      [
+        "delete_itemventa",
+        "ventas",
+        "itemventa"
+      ],
+      [
+        "view_itemventa",
+        "ventas",
+        "itemventa"
+      ],
+      [
+        "add_venta",
+        "ventas",
+        "venta"
+      ],
+      [
+        "change_venta",
+        "ventas",
+        "venta"
+      ],
+      [
+        "delete_venta",
+        "ventas",
+        "venta"
+      ],
+      [
+        "view_venta",
+        "ventas",
+        "venta"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "stock",
+    "permissions": [
+      [
+        "add_movimientostock",
+        "productos",
+        "movimientostock"
+      ],
+      [
+        "change_movimientostock",
+        "productos",
+        "movimientostock"
+      ],
+      [
+        "delete_movimientostock",
+        "productos",
+        "movimientostock"
+      ],
+      [
+        "view_movimientostock",
+        "productos",
+        "movimientostock"
+      ],
+      [
+        "add_producto",
+        "productos",
+        "producto"
+      ],
+      [
+        "change_producto",
+        "productos",
+        "producto"
+      ],
+      [
+        "delete_producto",
+        "productos",
+        "producto"
+      ],
+      [
+        "view_producto",
+        "productos",
+        "producto"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "ventas",
+    "permissions": [
+      [
+        "add_cliente",
+        "clientes",
+        "cliente"
+      ],
+      [
+        "change_cliente",
+        "clientes",
+        "cliente"
+      ],
+      [
+        "delete_cliente",
+        "clientes",
+        "cliente"
+      ],
+      [
+        "view_cliente",
+        "clientes",
+        "cliente"
+      ],
+      [
+        "add_itemventa",
+        "ventas",
+        "itemventa"
+      ],
+      [
+        "change_itemventa",
+        "ventas",
+        "itemventa"
+      ],
+      [
+        "delete_itemventa",
+        "ventas",
+        "itemventa"
+      ],
+      [
+        "view_itemventa",
+        "ventas",
+        "itemventa"
+      ],
+      [
+        "add_venta",
+        "ventas",
+        "venta"
+      ],
+      [
+        "change_venta",
+        "ventas",
+        "venta"
+      ],
+      [
+        "delete_venta",
+        "ventas",
+        "venta"
+      ],
+      [
+        "view_venta",
+        "ventas",
+        "venta"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$FoQ1Bq4ceIxjb2MqeCP2j8$sZZCdDQAvP7FCiN87Iv1l94PfNBn3XIqiiOcirBdH8U=",
+    "last_login": "2025-11-14T15:53:17.303Z",
+    "is_superuser": true,
+    "username": "mamani",
+    "first_name": "",
+    "last_name": "",
+    "email": "abdiasquiroga@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-13T17:07:20.260Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$7PMDJ1H81uAWuUkVLSvg0v$CL5BVXQkn4sfpuu0Kha+vK0877xeIeVOafo/yjmCuPY=",
+    "last_login": "2025-11-13T20:50:21.099Z",
+    "is_superuser": false,
+    "username": "Kevin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-13T17:15:38Z",
+    "groups": [
+      [
+        "stock"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$DQJBQzz7OJ4ZpSVG049XlV$6Vn1Ljf2IRtpoMkAW7/G3YYsIIm5ZxOD3WOq625FJAE=",
+    "last_login": "2025-11-14T12:32:20.095Z",
+    "is_superuser": false,
+    "username": "mateo",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-13T17:30:59Z",
+    "groups": [
+      [
+        "ventas"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 11,
+  "fields": {
+    "sku": "9DA7453A",
+    "nombre": "mesa",
+    "descripcion": "mesaa",
+    "precio": "22.00",
+    "stock": 22,
+    "stock_minimo": 5,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 12,
+  "fields": {
+    "sku": "33E4B7D4",
+    "nombre": "cartuchera",
+    "descripcion": "cartuchera aaa",
+    "precio": "20.00",
+    "stock": 2000,
+    "stock_minimo": 5,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 15,
+  "fields": {
+    "sku": "3B88D270",
+    "nombre": "Mouse Logitech M90",
+    "descripcion": "Mouse ¾ptico USB",
+    "precio": "5000.00",
+    "stock": 39,
+    "stock_minimo": 10,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 16,
+  "fields": {
+    "sku": "54E25D76",
+    "nombre": "Teclado Redragon",
+    "descripcion": "K552 mecßnico switch blue",
+    "precio": "25000.00",
+    "stock": 20,
+    "stock_minimo": 5,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 17,
+  "fields": {
+    "sku": "C7142A03",
+    "nombre": "Monitor Samsung 22",
+    "descripcion": "Pantalla LED Full HD",
+    "precio": "180000.00",
+    "stock": 4,
+    "stock_minimo": 6,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 20,
+  "fields": {
+    "sku": "1765C856",
+    "nombre": "Pendrive Kingston 64GB",
+    "descripcion": "USB 3.0",
+    "precio": "7000.00",
+    "stock": 100,
+    "stock_minimo": 20,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 21,
+  "fields": {
+    "sku": "A6429918",
+    "nombre": "Parlante JBL GO 3",
+    "descripcion": "Portßtil Bluetooth",
+    "precio": "23000.00",
+    "stock": 30,
+    "stock_minimo": 5,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 22,
+  "fields": {
+    "sku": "5B90B84E",
+    "nombre": "Router TP-Link Archer C6",
+    "descripcion": "Doble banda WiFi",
+    "precio": "38000.00",
+    "stock": 12,
+    "stock_minimo": 3,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 23,
+  "fields": {
+    "sku": "C62067EE",
+    "nombre": "Silla Gamer Cougar",
+    "descripcion": "Ergon¾mica reclinable",
+    "precio": "210000.00",
+    "stock": 5,
+    "stock_minimo": 1,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 24,
+  "fields": {
+    "sku": "A3FC4F99",
+    "nombre": "cama",
+    "descripcion": "caama",
+    "precio": "3.00",
+    "stock": 21,
+    "stock_minimo": 53,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 26,
+  "fields": {
+    "sku": "B9901A18",
+    "nombre": "e",
+    "descripcion": "ww",
+    "precio": "3.00",
+    "stock": 33,
+    "stock_minimo": 35,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 27,
+  "fields": {
+    "sku": "19F6F762",
+    "nombre": "w",
+    "descripcion": "w",
+    "precio": "2.00",
+    "stock": 2222,
+    "stock_minimo": 52,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 28,
+  "fields": {
+    "sku": "A86FF6D6",
+    "nombre": "silla22",
+    "descripcion": "sss",
+    "precio": "300.00",
+    "stock": 18,
+    "stock_minimo": 5,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 29,
+  "fields": {
+    "sku": "BFD1449B",
+    "nombre": "mesa",
+    "descripcion": "ss",
+    "precio": "22.00",
+    "stock": 10,
+    "stock_minimo": 5,
+    "imagen": ""
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 14,
+  "fields": {
+    "producto": 11,
+    "tipo": "entrada",
+    "cantidad": 2,
+    "motivo": "Stock inicial",
+    "usuario": "Kevin",
+    "fecha": "2025-11-13T22:09:15.124Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 15,
+  "fields": {
+    "producto": 12,
+    "tipo": "entrada",
+    "cantidad": 2,
+    "motivo": "Stock inicial",
+    "usuario": "mamani",
+    "fecha": "2025-11-13T23:35:43.608Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 17,
+  "fields": {
+    "producto": 12,
+    "tipo": "entrada",
+    "cantidad": 2033,
+    "motivo": "hola",
+    "usuario": "mamani",
+    "fecha": "2025-11-14T14:41:51.431Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 20,
+  "fields": {
+    "producto": 24,
+    "tipo": "entrada",
+    "cantidad": 33,
+    "motivo": "Stock inicial",
+    "usuario": "mamani",
+    "fecha": "2025-11-14T15:59:20.123Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 22,
+  "fields": {
+    "producto": 26,
+    "tipo": "entrada",
+    "cantidad": 33,
+    "motivo": "Stock inicial",
+    "usuario": "mamani",
+    "fecha": "2025-11-14T16:03:04.153Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 23,
+  "fields": {
+    "producto": 27,
+    "tipo": "entrada",
+    "cantidad": 2,
+    "motivo": "Stock inicial",
+    "usuario": "mamani",
+    "fecha": "2025-11-14T16:06:41.978Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 24,
+  "fields": {
+    "producto": 11,
+    "tipo": "entrada",
+    "cantidad": 23,
+    "motivo": "2",
+    "usuario": "mamani",
+    "fecha": "2025-11-14T16:10:11.522Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 25,
+  "fields": {
+    "producto": 28,
+    "tipo": "entrada",
+    "cantidad": 30,
+    "motivo": "Stock inicial",
+    "usuario": "mamani",
+    "fecha": "2025-11-14T16:51:46.885Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 26,
+  "fields": {
+    "producto": 29,
+    "tipo": "entrada",
+    "cantidad": 22,
+    "motivo": "Stock inicial",
+    "usuario": "mamani",
+    "fecha": "2025-11-14T16:53:00.259Z"
+  }
+},
+{
+  "model": "productos.movimientostock",
+  "pk": 27,
+  "fields": {
+    "producto": 27,
+    "tipo": "entrada",
+    "cantidad": 2220,
+    "motivo": "2",
+    "usuario": "mamani",
+    "fecha": "2025-11-14T16:53:34.121Z"
+  }
+},
+{
+  "model": "sites.site",
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 6,
+  "fields": {
+    "nombre": "MarÝa",
+    "apellido": "Gomez",
+    "email": "maria.gomez@example.com",
+    "telefono": "1133445566",
+    "direccion": "Avenida Siempreviva 742",
+    "dni": "28999333"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 9,
+  "fields": {
+    "nombre": "Luis",
+    "apellido": "Ruiz",
+    "email": "luis.ruiz@example.com",
+    "telefono": "1166778899",
+    "direccion": "Mitre 1020",
+    "dni": "31222444"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 10,
+  "fields": {
+    "nombre": "Sofia",
+    "apellido": "Herrera",
+    "email": "sofia.herrera@example.com",
+    "telefono": "1177889900",
+    "direccion": "Alsina 450",
+    "dni": "29888777"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 11,
+  "fields": {
+    "nombre": "Diego",
+    "apellido": "Fernandez",
+    "email": "diego.fernandez@example.com",
+    "telefono": "1188990011",
+    "direccion": "Colon 300",
+    "dni": "30999666"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 12,
+  "fields": {
+    "nombre": "Laura",
+    "apellido": "Sosa",
+    "email": "laura.sosa@example.com",
+    "telefono": "1199001122",
+    "direccion": "AzcuÚnaga 210",
+    "dni": "32222444"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 13,
+  "fields": {
+    "nombre": "Mateo",
+    "apellido": "Bustos",
+    "email": "mateo.bustos@example.com",
+    "telefono": "1122003344",
+    "direccion": "Rivadavia 980",
+    "dni": "31111333"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 15,
+  "fields": {
+    "nombre": "Mateo",
+    "apellido": "mamani",
+    "email": "juanmamanicason@gmail.com",
+    "telefono": "33334",
+    "direccion": "wwww2",
+    "dni": "222"
+  }
+},
+{
+  "model": "ventas.venta",
+  "pk": 9,
+  "fields": {
+    "codigo": "1111",
+    "cliente": 9,
+    "fecha": "2025-11-14T01:31:21.623Z",
+    "total": "286.00"
+  }
+},
+{
+  "model": "ventas.venta",
+  "pk": 10,
+  "fields": {
+    "codigo": "112",
+    "cliente": 6,
+    "fecha": "2025-11-14T17:02:18.893Z",
+    "total": "6504.00"
+  }
+},
+{
+  "model": "ventas.itemventa",
+  "pk": 12,
+  "fields": {
+    "venta": 9,
+    "producto": 12,
+    "cantidad": 11,
+    "precio_unitario": "22.00",
+    "subtotal": "242.00"
+  }
+},
+{
+  "model": "ventas.itemventa",
+  "pk": 13,
+  "fields": {
+    "venta": 9,
+    "producto": 15,
+    "cantidad": 11,
+    "precio_unitario": "2.00",
+    "subtotal": "22.00"
+  }
+},
+{
+  "model": "ventas.itemventa",
+  "pk": 14,
+  "fields": {
+    "venta": 9,
+    "producto": 17,
+    "cantidad": 11,
+    "precio_unitario": "2.00",
+    "subtotal": "22.00"
+  }
+},
+{
+  "model": "ventas.itemventa",
+  "pk": 15,
+  "fields": {
+    "venta": 10,
+    "producto": 29,
+    "cantidad": 12,
+    "precio_unitario": "22.00",
+    "subtotal": "264.00"
+  }
+},
+{
+  "model": "ventas.itemventa",
+  "pk": 16,
+  "fields": {
+    "venta": 10,
+    "producto": 24,
+    "cantidad": 12,
+    "precio_unitario": "220.00",
+    "subtotal": "2640.00"
+  }
+},
+{
+  "model": "ventas.itemventa",
+  "pk": 17,
+  "fields": {
+    "venta": 10,
+    "producto": 28,
+    "cantidad": 12,
+    "precio_unitario": "300.00",
+    "subtotal": "3600.00"
+  }
+}
+]
