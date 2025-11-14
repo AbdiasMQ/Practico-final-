@@ -1,0 +1,11 @@
+nombre,apellido,dni,telefono,email,direccion
+Juan,Perez,30111222,1122334455,juan.perez@example.com,Calle 123
+María,Gomez,28999333,1133445566,maria.gomez@example.com,Avenida Siempreviva 742
+Carlos,Luna,27888777,1144556677,carlos.luna@example.com,Belgrano 555
+Ana,Martinez,32555888,1155667788,ana.martinez@example.com,San Martín 890
+Luis,Ruiz,31222444,1166778899,luis.ruiz@example.com,Mitre 1020
+Sofia,Herrera,29888777,1177889900,sofia.herrera@example.com,Alsina 450
+Diego,Fernandez,30999666,1188990011,diego.fernandez@example.com,Colon 300
+Laura,Sosa,32222444,1199001122,laura.sosa@example.com,Azcuénaga 210
+Mateo,Bustos,31111333,1122003344,mateo.bustos@example.com,Rivadavia 980
+Valentina,Molina,33000999,1133004455,valentina.molina@example.com,Boedo 770
