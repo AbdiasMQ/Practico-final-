@@ -1,0 +1,30 @@
+services:
+  db: #servicios de base de datos
+    image: postgres:15 #imagen sacada de hub.docker.com
+    env_file:  #espidicamos que usamos un archivo de entorno
+      - .env # nombre del archivo
+    environment: #especificamos la variables de entorno
+      POSTGRES_DB:       ${POSTGRES_DB} #busca en el archivo .env la varible que se llame asi
+      POSTGRES_USER:     ${POSTGRES_USER} #busca en el archivo .env la varible que se llame asi
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} #busca en el archivo .env la varible que se llame asi
+    volumes: #volumne persistenten
+      - db-data:/var/lib/postgresql/data
+  web:
+    build: . # aca se hara una construccion de docker build con el dockerfile 
+    command: sh -c "sleep 5 && python manage.py runserver 0.0.0.0:8000" #este comando hace que espere los primeros 5 segundos y luego hacer un runserver 
+    ports:
+      - '8000:8000' #puerto 800 de nuestra pc y 8000 siguiente del container
+    volumes:
+      - ./systemventas:/systemventas #mapeamos la carpeta local de nuestro proyecto con la carpeta /crud dentro del conainer para poder hacer cambios y que lo mismo se reflejen en tiempo real 
+    env_file: # carga las variables de entorno definidas en el archivo .env
+              # (usuario de la BD, contraseña, nombre de la BD, host, puerto, etc.)
+      - .env
+    environment: # define explícitamente la variable de entorno DATABASE_URL con el postgres
+    
+      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB} #cadena de conexcion con la base de datos
+    depends_on: 
+      - db  # asegura que el servicio "db" (Postgres) arranque antes que "web"
+volumes:
+  db-data:
+  # volumen persistente para la base de datos Postgres
+  # aunque el contenedor se elimine, los datos siguen guardados en este volumen
