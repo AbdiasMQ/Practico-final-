@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Nueva Venta{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4"><i class="fas fa-plus-circle"></i> Crear Nueva Venta</h1>
+    
+    <form method="post" id="ventaForm" novalidate> 
+        {% csrf_token %}
+        
+        <!-- Formulario Principal -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="fas fa-user"></i> Datos de la Venta</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form.cliente|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form.codigo|as_crispy_field }}
+                    </div>
+                </div>
+                
+                <!-- MOSTRAR ERRORES DEL FORM PRINCIPAL -->
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger mt-2">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Formset -->
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0"><i class="fas fa-list"></i> Productos</h5>
+            </div>
+            <div class="card-body">
+                {{ formset.management_form }}
+                
+                <!-- ERRORES GENERALES DEL FORMSET -->
+                {% if formset.non_form_errors %}
+                    <div class="alert alert-danger">
+                        <strong>Errores generales:</strong> {{ formset.non_form_errors }}
+                    </div>
+                {% endif %}
+                
+                <table class="table table-bordered" id="items-table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Producto *</th>
+                            <th style="width: 120px">Cantidad *</th>
+                            <th style="width: 150px">Precio Unit. *</th>
+                            <th style="width: 150px">Subtotal</th>
+                            <th style="width: 80px">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item_form in formset %}
+                        <tr class="item-row">
+                            <td>
+                                {{ item_form.producto }}
+                                <!-- ERRORES DE CADA CAMPO (visibles) -->
+                                {% if item_form.producto.errors %}
+                                    <div class="text-danger small">{{ item_form.producto.errors }}</div>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {{ item_form.cantidad }}
+                                {% if item_form.cantidad.errors %}
+                                    <div class="text-danger small">{{ item_form.cantidad.errors }}</div>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {{ item_form.precio_unitario }}
+                                {% if item_form.precio_unitario.errors %}
+                                    <div class="text-danger small">{{ item_form.precio_unitario.errors }}</div>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <input type="text" class="form-control subtotal" value="0.00" readonly>
+                            </td>
+                            <td class="text-center">
+                                {% if item_form.DELETE %}
+                                    {{ item_form.DELETE }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                
+                <div class="d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn btn-sm btn-info" onclick="addItem()">
+                        <i class="fas fa-plus"></i> Agregar Producto
+                    </button>
+                    
+                    <div class="text-end">
+                        <h4>Total: $<span id="total-venta">0.00</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- BOTÓN DE SUBMIT -->
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success btn-lg">
+                <i class="fas fa-save"></i> Guardar Venta
+            </button>
+            <a href="{% url 'ventas:venta_list' %}" class="btn btn-secondary btn-lg">
+                Cancelar
+            </a>
+        </div>
+    </form>
+</div>
+
+<script>
+// JavaScript para agregar filas
+function addItem() {
+    const tbody = document.querySelector('#items-table tbody');
+    const totalForms = document.querySelector('[name="items-TOTAL_FORMS"]');
+    const formNum = parseInt(totalForms.value);
+    
+    // Clonar la primera fila
+    const firstRow = tbody.querySelector('.item-row');
+    const newRow = firstRow.cloneNode(true);
+    
+    // Actualizar índices del nuevo form
+    newRow.innerHTML = newRow.innerHTML.replace(/items-\d+-/g, `items-${formNum}-`);
+    newRow.querySelectorAll('input, select').forEach(input => {
+        if (input.name) input.name = input.name.replace(/items-\d+-/, `items-${formNum}-`);
+        if (input.id) input.id = input.id.replace(/items-\d+-/, `items-${formNum}-`);
+    });
+    
+    // Limpiar valores
+    newRow.querySelectorAll('input').forEach(input => {
+        if (input.type !== 'checkbox') input.value = '';
+        if (input.type === 'checkbox') input.checked = false;
+    });
+    newRow.querySelector('.subtotal').value = '0.00';
+    
+    // Limpiar errores
+    newRow.querySelectorAll('.text-danger').forEach(error => error.remove());
+    
+    tbody.appendChild(newRow);
+    
+    // Actualizar contador
+    totalForms.value = formNum + 1;
+    
+    // Agregar event listeners al nuevo form
+    agregarEventListeners(newRow);
+}
+
+// Funciones para cálculos
+function agregarEventListeners(row) {
+    const select = row.querySelector('select');
+    const cantidad = row.querySelector('input[name*="cantidad"]');
+    const precio = row.querySelector('input[name*="precio_unitario"]');
+    
+    select.addEventListener('change', function() {
+        actualizarPrecioYTotal(this);
+    });
+    
+    cantidad.addEventListener('input', function() {
+        actualizarSubtotal(row);
+    });
+    
+    precio.addEventListener('input', function() {
+        actualizarSubtotal(row);
+    });
+}
+
+function actualizarPrecioYTotal(selectElement) {
+    const row = selectElement.closest('.item-row');
+    const precioInput = row.querySelector('input[name*="precio_unitario"]');
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    const precio = selectedOption.dataset.precio || '0';
+    
+    precioInput.value = precio;
+    actualizarSubtotal(row);
+}
+
+function actualizarSubtotal(row) {
+    const cantidadInput = row.querySelector('input[name*="cantidad"]');
+    const precioInput = row.querySelector('input[name*="precio_unitario"]');
+    const subtotalInput = row.querySelector('.subtotal');
+    
+    const cantidad = parseInt(cantidadInput.value) || 0;
+    const precio = parseFloat(precioInput.value) || 0;
+    const subtotal = cantidad * precio;
+    
+    subtotalInput.value = subtotal.toFixed(2);
+    actualizarTotalGeneral();
+}
+
+function actualizarTotalGeneral() {
+    let total = 0;
+    document.querySelectorAll('.item-row').forEach(row => {
+        const subtotalInput = row.querySelector('.subtotal');
+        const subtotal = parseFloat(subtotalInput.value) || 0;
+        total += subtotal;
+    });
+    document.getElementById('total-venta').textContent = total.toFixed(2);
+}
+
+// Inicializar event listeners en las filas existentes
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.item-row').forEach(row => {
+        agregarEventListeners(row);
+    });
+    
+    // Inicializar precios si ya hay productos seleccionados
+    document.querySelectorAll('select').forEach(select => {
+        if (select.value) {
+            actualizarPrecioYTotal(select);
+        }
+    });
+});
+</script>
+
+<style>
+.subtotal {
+    font-weight: bold;
+    color: #28a745;
+    background-color: #f8f9fa;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.table th {
+    font-weight: 600;
+}
+</style>
+{% endblock %}
