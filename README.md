@@ -56,5 +56,37 @@ Asegúrate de tener instalado **Docker Desktop** (para Windows/Mac) o **Docker E
 ### 3. Levantar Contenedores
 Este comando construye la imagen de la aplicación (`Dockerfile`), crea la red y levanta el servicio web y la base de datos (`db`).
 
+## 💾 Inicialización y Carga de Base de Datos
+
+Una vez que los contenedores (`web` y `db`) estén levantados con `docker-compose up --build -d`, es fundamental aplicar la estructura de la base de datos (migraciones) y cargar los datos iniciales.
+
+### Comandos de Inicialización
+
+Todos estos comandos deben ejecutarse dentro del contenedor `web`:
+
+```bash
+# 1. Aplicar las migraciones para crear las tablas
+docker-compose exec web python manage.py migrate
+
+# 2. Crear superusuario (para acceder al /admin)
+docker-compose exec web python manage.py createsuperuser
+
+# 3. Cargar datos de prueba de clientes y productos
+docker-compose exec web python manage.py loaddata backup_convertido.json
+
+## 🔑 Autenticación y Permisos
+
+El sistema implementa un robusto control de acceso utilizando **`django-allauth`** para la gestión de cuentas y el sistema nativo de **Grupos y Permisos** de Django para la autorización.
+
+### Estructura de Grupos y Permisos
+
+| Grupo | Apps/Permisos Asignados | Alcance Funcional |
+| :--- | :--- | :--- |
+| **admin** | Permisos totales (Superusuario). | Acceso administrativo completo. |
+| **stock** | Permisos de la App **productos**. | Gestión de inventario, creación/edición de productos y movimientos de stock. |
+| **ventas** | Permisos de las Apps **clientes** y **ventas**. | Gestión de clientes, registro de ventas y generación de comprobantes PDF. |
+
+> **Nota de Seguridad:** Un usuario en el grupo **'ventas'** que intente acceder a una URL de modificación de stock recibirá un error **HTTP 403 (Prohibido)**.
+
 ```bash
 docker-compose up --build -d
