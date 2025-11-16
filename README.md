@@ -9,21 +9,9 @@ El proyecto se enfoca en la **robustez** y la **seguridad**, implementando:
 1.  **Trazabilidad de Stock:** Control detallado de movimientos e inventario mínimo.
 2.  **Autenticación Avanzada:** Gestión de usuarios con `django-allauth` y permisos basados en grupos (`stock`, `ventas`, `admin`).
 3.  **Contenedorización:** Despliegue en producción utilizando **Docker** y **PostgreSQL**.
+4.   Generación de **Comprobantes PDF** (`xhtml2pdf`). 
 
 ---
-
-## ✨ Características y Funcionalidades Clave
-
-| Módulo | Descripción | Funcionalidades Notables |
-| :--- | :--- | :--- |
-| **Productos** | Gestión del producto y el inventario. | Alerta automática de **Stock Mínimo**. Registro de `MovimientoStock` (Entrada/Salida). |
-| **Ventas** | Registro de transacciones y generador de pdf. | Cálcula el total de una venta. Generación de **Comprobantes PDF** (`xhtml2pdf`). 
-| **Clientes** | Base de datos de clientes. | Validación de unicidad de **DNI**. Vistas con paginación y búsqueda. |
-| **Seguridad** | Control de acceso basado en roles. | Uso de `LoginRequiredMixin` y `PermissionRequiredMixin`. Implementación de Grupos para roles (`stock`, `ventas`, 'admin). |
-| **Infraestructura** | Entorno de desarrollo/producción. | **Dockerización** de la aplicación y la BD **PostgreSQL** mediante `docker-compose`. |
-
----
-
 ## 🛠️ Tecnologías Utilizadas
 
 * **Backend:** Python 3.13.5, Django 5.0+
@@ -55,7 +43,10 @@ Asegúrate de tener instalado **Docker Desktop** (para Windows/Mac) o **Docker E
 
 ### 3. Levantar Contenedores
 Este comando construye la imagen de la aplicación (`Dockerfile`), crea la red y levanta el servicio web y la base de datos (`db`).
+```bash
+docker-compose up --build -d
 
+```
 ## 💾 Inicialización y Carga de Base de Datos
 
 Una vez que los contenedores (`web` y `db`) estén levantados con `docker-compose up --build -d`, es fundamental aplicar la estructura de la base de datos (migraciones) y cargar los datos iniciales.
@@ -74,6 +65,7 @@ docker-compose exec web python manage.py createsuperuser
 # 3. Cargar datos de prueba de clientes y productos
 docker-compose exec web python manage.py loaddata backup_convertido.json
 
+```
 ## 🔑 Autenticación y Permisos
 
 El sistema implementa un robusto control de acceso utilizando **`django-allauth`** para la gestión de cuentas y el sistema nativo de **Grupos y Permisos** de Django para la autorización.
