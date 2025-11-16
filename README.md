@@ -79,6 +79,3 @@ El sistema implementa un robusto control de acceso utilizando **`django-allauth`
 | **ventas** | Permisos de las Apps **clientes** y **ventas**. | Gestión de clientes, registro de ventas y generación de comprobantes PDF. |
 
 > **Nota de Seguridad:** Un usuario en el grupo **'ventas'** que intente acceder a una URL de modificación de stock recibirá un error **HTTP 403 (Prohibido)**.
-
-```bash
-docker-compose up --build -d
